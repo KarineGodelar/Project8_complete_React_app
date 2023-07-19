@@ -1,0 +1,20 @@
+@import '../../assets/style/variables';
+
+.banner {
+  display: flex;
+  height: 223px;
+
+  &__background {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  &__text {
+    color: white;
+    @include kasa-font-family;
+    position: absolute;
+    top: 0px;
+    margin: 250px 0px 0px 200px;
+  }
+}
