@@ -1,5 +1,14 @@
+import Banner from '../../components/Banner';
+import Collapse from '../../components/Collapse';
+import './index.scss';
+
 function Apropos() {
-  return <h1>A propos</h1>;
+  return (
+    <div>
+      <Banner />
+      <Collapse />
+    </div>
+  );
 }
 
 export default Apropos;

@@ -4,7 +4,7 @@ import './index.scss';
 
 function Home() {
   return (
-    <div className="home container">
+    <div className="home-container">
       <Banner />
       <div className="cards-container">
         <Card />

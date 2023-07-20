@@ -1,15 +1,25 @@
 import './index.scss';
-// import backgroundImage from '../../assets/images/image_source_1.png';
+import { useLocation } from 'react-router';
 
 function Banner() {
+  const currentLocation = useLocation();
   return (
-    <div className="banner">
-      {/* <img
-        className="banner__background"
-        src={backgroundImage}
-        alt="paysage de montagne"
-      /> */}
-      <h1 className="banner__text">Chez vous, partout et ailleurs</h1>
+    <div
+      className={
+        currentLocation.pathname === '/a-propos'
+          ? 'banner banner__apropos'
+          : 'banner banner__home'
+      }
+    >
+      <h1
+        className={
+          currentLocation.pathname === '/a-propos'
+            ? 'banner__apropos--text'
+            : 'banner__home--text'
+        }
+      >
+        Chez vous, partout et ailleurs
+      </h1>
     </div>
   );
 }

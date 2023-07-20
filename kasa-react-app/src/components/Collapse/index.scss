@@ -1,0 +1,22 @@
+@import '../../assets/style/variables';
+
+.collapse {
+  margin: 20px;
+  &__dropdown {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 17px;
+    height: 52px;
+    border-radius: 10px;
+    background-color: $red-kasa;
+    @include kasa-font-family;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+
+    &--arrow {
+      height: 15px;
+    }
+  }
+}

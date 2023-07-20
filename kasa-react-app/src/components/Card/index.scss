@@ -5,9 +5,22 @@
   height: 340px;
   box-sizing: border-box;
   border-radius: 10px;
-  background-color: $red-kasa;
+  background: linear-gradient($red-kasa, rgba(0, 0, 0, 0.7));
   @media (max-width: 768px) {
     width: 100%;
     height: 255px;
+  }
+
+  &__title {
+    padding: 275px 0px 0px 20px;
+    width: 100px;
+    @include kasa-font-family;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+
+    @media (max-width: 768px) {
+      padding: 190px 0px 0px 20px;
+    }
   }
 }
