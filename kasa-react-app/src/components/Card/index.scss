@@ -1,0 +1,13 @@
+@import '../../assets/style/variables';
+
+.card {
+  width: 30%;
+  height: 340px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: $red-kasa;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 255px;
+  }
+}
