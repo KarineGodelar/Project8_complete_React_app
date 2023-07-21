@@ -1,14 +1,28 @@
 import './index.scss';
 import arrow from '../../assets/images/arrow-top.svg';
+import { useState } from 'react';
 
-function Collapse() {
+function Collapse({ titleText, text }) {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="collapse">
       <div className="collapse__dropdown">
-        <p>Texte de test</p>
-        <img src={arrow} alt="flèche" className="collapse__dropdown--arrow" />
+        <p>{titleText}</p>
+        <img
+          id="arrow"
+          src={arrow}
+          alt="flèche"
+          className={
+            !isOpen ? 'animationin' : 'collapse__dropdown--arrow-reverse'
+          }
+          onClick={() => setIsOpen(!isOpen)}
+        />
       </div>
-      <div className="collapse__text"></div>
+      <div
+        className={isOpen ? 'collapse__text--open' : 'collapse__text--closed'}
+      >
+        {text}
+      </div>
     </div>
   );
 }

@@ -15,8 +15,50 @@
     font-weight: 500;
     color: white;
 
+    @media (max-width: 768px) {
+      border-radius: 5px;
+      height: 30px;
+      font-size: 13px;
+    }
+
     &--arrow {
       height: 15px;
+      // &:focus {
+      //   animation: arrow-rotation 1000ms 200ms both;
+      // }
+      @media (max-width: 768px) {
+        height: 10px;
+      }
+      &-reverse {
+        height: 15px;
+        transform: rotate(180deg);
+        animation: arrow-rotation 1000ms 200ms both reverse;
+      }
     }
+  }
+
+  &__text {
+    &--open {
+      background-color: $grey-kasa;
+      @include kasa-font-family;
+      font-size: 18px;
+      font-weight: 400;
+      color: $red-kasa;
+      padding: 17px;
+      border-radius: 0px 0px 10px 10px;
+      @media (max-width: 768px) {
+        border-radius: 5px;
+        font-size: 13px;
+      }
+    }
+    &--closed {
+      display: none;
+    }
+  }
+}
+
+.animationin {
+  &:enabled {
+    animation: arrow-rotation 1000ms 200ms both;
   }
 }
