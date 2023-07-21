@@ -13,7 +13,9 @@ function Collapse({ titleText, text }) {
           src={arrow}
           alt="flèche"
           className={
-            !isOpen ? 'animationin' : 'collapse__dropdown--arrow-reverse'
+            !isOpen
+              ? 'collapse__dropdown--arrow'
+              : 'collapse__dropdown--arrow-reverse'
           }
           onClick={() => setIsOpen(!isOpen)}
         />

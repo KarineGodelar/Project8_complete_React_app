@@ -16,7 +16,7 @@ root.render(
       <Header />
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/fiche-logement" element={<Fiche />} />
+        <Route path="/fiche-logement/:id" element={<Fiche />} />
         <Route path="/a-propos" element={<Apropos />} />
         <Route path="*" element={<PageErreur />} />
       </Routes>

@@ -23,16 +23,18 @@
 
     &--arrow {
       height: 15px;
-      // &:focus {
-      //   animation: arrow-rotation 1000ms 200ms both;
-      // }
+
+      animation: arrow-rotation 1000ms 200ms both;
+
       @media (max-width: 768px) {
         height: 10px;
       }
       &-reverse {
         height: 15px;
         transform: rotate(180deg);
-        animation: arrow-rotation 1000ms 200ms both reverse;
+        &:hover {
+          animation: arrow-rotation 1000ms 200ms both reverse;
+        }
       }
     }
   }
