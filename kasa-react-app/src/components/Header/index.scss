@@ -4,6 +4,8 @@
   margin: 50px;
   display: flex;
   justify-content: space-between;
+  height: 68px;
+  box-sizing: border-box;
   @media (max-width: 768px) {
     margin: 20px;
   }
