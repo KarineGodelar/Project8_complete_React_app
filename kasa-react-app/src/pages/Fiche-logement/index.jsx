@@ -1,11 +1,24 @@
 import './index.scss';
 import { useParams } from 'react-router';
+import dataTable from '../../data/kasa';
 
 function Fiche() {
   const { logementId } = useParams();
+
+  dataTable.forEach((content) => console.log(content));
+
   return (
-    <div>
-      <h1>Fiche logement</h1>
+    <div className="fiche">
+      <div className="fiche__carousel"></div>
+      <div className="fiche__text&tags">
+        <div className="fiche__text&tags--text"></div>
+        <div className="fiche__text&tags--tags"></div>
+      </div>
+      <div className="fiche__host&rating">
+        <div className="fiche__host&rating--rating"></div>
+        <div className="fiche__host&rating--host"></div>
+      </div>
+      <div className="fiche__details"></div>
       <h2>L'id du logement est {logementId}</h2>
     </div>
   );

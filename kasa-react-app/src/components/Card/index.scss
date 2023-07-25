@@ -16,20 +16,33 @@
     border-radius: 10px;
     width: 100%;
     object-fit: cover;
-    // background: linear-gradient($red-kasa, rgba(0, 0, 0, 0.7));
+
+    @media (max-width: 768px) {
+      height: 255px;
+    }
   }
 
   &__title {
+    display: inline-block;
+    position: relative;
+    bottom: 344px;
+    height: 340px;
+    box-sizing: border-box;
+    border-radius: 10px;
     text-decoration: none;
-    padding: 200px 0px 0px 20px;
-    width: 100px;
+    width: 100%;
     @include kasa-font-family;
     font-size: 18px;
     font-weight: 500;
     color: white;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4));
+    text-align: left;
+    padding: 230px 20px 0px 20px;
 
     @media (max-width: 768px) {
-      padding: 190px 0px 0px 20px;
+      height: 255px;
+      padding: 200px 0px 50px 20px;
+      margin-top: 85px;
     }
   }
 }

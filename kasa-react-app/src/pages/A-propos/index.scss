@@ -1,0 +1,15 @@
+.apropos {
+  margin: 0px;
+
+  @media (max-width: 768px) {
+    margin: 0px;
+  }
+
+  &__collapse {
+    margin: 0px 13%;
+
+    @media (max-width: 768px) {
+      margin: 0px;
+    }
+  }
+}

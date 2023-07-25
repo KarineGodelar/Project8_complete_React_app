@@ -19,12 +19,14 @@ locataire, cela permet à nos équipes de vérifier que les standards sont bien 
 également des ateliers sur la sécurité domestique pour nos hôtes.`;
 
   return (
-    <div>
+    <div className="apropos">
       <Banner />
-      <Collapse titleText={title1} text={text1} />
-      <Collapse titleText={title2} text={text2} />
-      <Collapse titleText={title3} text={text3} />
-      <Collapse titleText={title4} text={text4} />
+      <div className="apropos__collapse">
+        <Collapse titleText={title1} text={text1} />
+        <Collapse titleText={title2} text={text2} />
+        <Collapse titleText={title3} text={text3} />
+        <Collapse titleText={title4} text={text4} />
+      </div>
     </div>
   );
 }

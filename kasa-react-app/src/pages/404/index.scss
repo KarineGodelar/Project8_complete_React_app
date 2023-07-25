@@ -11,7 +11,7 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  @media (max-width: 798px) {
+  @media (max-width: 768px) {
     height: 580px;
   }
 
@@ -19,7 +19,7 @@
     font-size: 288px;
     font-weight: 700;
     margin: 0px;
-    @media (max-width: 798px) {
+    @media (max-width: 768px) {
       font-size: 96px;
     }
   }
@@ -29,7 +29,7 @@
     font-weight: 500;
     margin: 0px 90px;
     padding-bottom: 50px;
-    @media (max-width: 798px) {
+    @media (max-width: 768px) {
       font-size: 18px;
     }
   }
@@ -40,7 +40,7 @@
     margin: 0px;
     padding-bottom: 90px;
     color: $red-kasa;
-    @media (max-width: 798px) {
+    @media (max-width: 768px) {
       font-size: 14px;
     }
   }
