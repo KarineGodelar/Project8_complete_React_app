@@ -1,0 +1,31 @@
+@import '../../assets/style/variables';
+
+.fiche {
+  margin: 100px;
+  @include kasa-font-family;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    margin: 20px;
+  }
+
+  &__content {
+    display: flex;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__textntags {
+    color: $red-kasa;
+
+    &--text--title {
+      font-size: 36px;
+    }
+
+    &--text--location {
+      font-size: 18px;
+    }
+  }
+}
