@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import dataTable from '../../data/kasa';
 import Rating from '../../components/Ratings';
 import Carousel from '../../components/Carousel';
+import Collapse from '../../components/Collapse';
 
 function Fiche() {
   const { logementId } = useParams();
@@ -19,7 +20,7 @@ function Fiche() {
     .filter((logement) => logement.id === logementId)
     .map((item) => item.location);
 
-  const ficheTags = dataTable
+  const ficheTagsTable = dataTable
     .filter((logement) => logement.id === logementId)
     .map((item) => item.tags);
 
@@ -30,6 +31,23 @@ function Fiche() {
   const ficheHostPicture = dataTable
     .filter((logement) => logement.id === logementId)
     .map((item) => item.host.picture);
+
+  const descriptionTitle = 'Description';
+
+  const equipmentTitle = 'Équipements';
+
+  const descriptionText = dataTable
+    .filter((logement) => logement.id === logementId)
+    .map((item) => item.description);
+  console.log(descriptionText);
+
+  const equipmentText = dataTable
+    .filter((logement) => logement.id === logementId)
+    .map((item) =>
+      item.equipments.map((e) => {
+        return <li key={e.toString()}>{e}</li>;
+      })
+    );
 
   return (
     <div className="fiche">
@@ -45,23 +63,26 @@ function Fiche() {
               {ficheLocation}
             </h2>
           </div>
-          <div className="fiche__textntags--tags"> {ficheTags} </div>
+          <div className="fiche__textntags--tags"> {ficheTagsTable} </div>
         </div>
-        <div className="fiche__host&rating">
-          <div className="fiche__host&rating--rating">
+        <div className="fiche__hostnrating">
+          <div className="fiche__hostnrating--rating">
             <Rating />
           </div>
-          <div className="fiche__host&rating--host">
-            <p className="fiche__host&rating--host-name">{ficheHostName}</p>
+          <div className="fiche__hostnrating--host">
+            <p className="fiche__hostnrating--host-name">{ficheHostName}</p>
             <img
-              className="fiche__host&rating--host-picture"
+              className="fiche__hostnrating--host-picture"
               src={ficheHostPicture}
               alt="hôte"
             />
           </div>
         </div>
       </div>
-      <div className="fiche__details"></div>
+      <div className="fiche__details">
+        <Collapse titleText={descriptionTitle} text={descriptionText} />
+        <Collapse titleText={equipmentTitle} text={equipmentText} />
+      </div>
     </div>
   );
 }

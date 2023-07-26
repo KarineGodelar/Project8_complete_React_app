@@ -2,6 +2,12 @@
 
 .collapse {
   margin: 20px;
+  min-width: 47%;
+
+  @media (max-width: 768px) {
+    min-width: 97%;
+  }
+
   &__dropdown {
     display: flex;
     align-items: center;
@@ -24,8 +30,9 @@
     &--arrow {
       height: 15px;
 
-      animation: arrow-rotation 1000ms 200ms both;
-
+      &:hover {
+        animation: arrow-rotation 1000ms 200ms both;
+      }
       @media (max-width: 768px) {
         height: 10px;
       }
@@ -48,6 +55,7 @@
       color: $red-kasa;
       padding: 17px;
       border-radius: 0px 0px 10px 10px;
+      list-style-type: none;
       @media (max-width: 768px) {
         border-radius: 5px;
         font-size: 13px;

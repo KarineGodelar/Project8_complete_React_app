@@ -22,10 +22,52 @@
 
     &--text--title {
       font-size: 36px;
+      font-weight: 500;
     }
 
     &--text--location {
       font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  &__hostnrating {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 50%;
+    align-items: end;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &--host {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-name {
+        color: $red-kasa;
+        font-size: 18px;
+        margin-right: 10px;
+      }
+
+      &-picture {
+        border-radius: 50%;
+        height: 64px;
+      }
+    }
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
   }
 }
