@@ -5,13 +5,15 @@ import dataTable from '../../data/kasa';
 function Fiche() {
   const { logementId } = useParams();
 
-  dataTable.forEach((content) => console.log(content));
+  const ficheTitle = dataTable
+    .filter((logement) => logement.id === logementId)
+    .map((item) => item.title);
 
   return (
     <div className="fiche">
       <div className="fiche__carousel"></div>
       <div className="fiche__text&tags">
-        <div className="fiche__text&tags--text"></div>
+        <div className="fiche__text&tags--text">{ficheTitle}</div>
         <div className="fiche__text&tags--tags"></div>
       </div>
       <div className="fiche__host&rating">
