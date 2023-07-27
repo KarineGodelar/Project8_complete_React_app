@@ -2,7 +2,7 @@ import './index.scss';
 import { useParams } from 'react-router';
 import dataTable from '../../data/kasa';
 import Rating from '../../components/Ratings';
-import Carousel from '../../components/Carousel';
+import Carrousel from '../../components/Carrousel';
 import Collapse from '../../components/Collapse';
 
 function Fiche() {
@@ -11,6 +11,8 @@ function Fiche() {
   const fichePictures = dataTable
     .filter((logement) => logement.id === logementId)
     .map((item) => item.pictures);
+
+  // console.log(fichePictures);
 
   const ficheTitle = dataTable
     .filter((logement) => logement.id === logementId)
@@ -39,7 +41,7 @@ function Fiche() {
   const descriptionText = dataTable
     .filter((logement) => logement.id === logementId)
     .map((item) => item.description);
-  console.log(descriptionText);
+  // console.log(descriptionText);
 
   const equipmentText = dataTable
     .filter((logement) => logement.id === logementId)
@@ -53,7 +55,7 @@ function Fiche() {
     <div className="fiche">
       <div className="fiche__carousel">
         {' '}
-        <Carousel image={fichePictures[0][0]} number={2} />{' '}
+        <Carrousel images={fichePictures} />{' '}
       </div>
       <div className="fiche__content">
         <div className="fiche__textntags">
