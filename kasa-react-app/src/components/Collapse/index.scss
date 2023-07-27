@@ -2,10 +2,11 @@
 
 .collapse {
   margin: 20px;
-  min-width: 47%;
+  min-width: 48%;
 
   @media (max-width: 768px) {
-    min-width: 97%;
+    width: 96%;
+    margin: 10px;
   }
 
   &__dropdown {
@@ -64,11 +65,5 @@
     &--closed {
       display: none;
     }
-  }
-}
-
-.animationin {
-  &:enabled {
-    animation: arrow-rotation 1000ms 200ms both;
   }
 }

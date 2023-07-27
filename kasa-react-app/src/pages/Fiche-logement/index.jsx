@@ -24,7 +24,11 @@ function Fiche() {
 
   const ficheTagsTable = dataTable
     .filter((logement) => logement.id === logementId)
-    .map((item) => item.tags);
+    .map((item) =>
+      item.tags.map((e) => {
+        return <li key={e.toString()}>{e}</li>;
+      })
+    );
 
   const ficheHostName = dataTable
     .filter((logement) => logement.id === logementId)
@@ -41,7 +45,6 @@ function Fiche() {
   const descriptionText = dataTable
     .filter((logement) => logement.id === logementId)
     .map((item) => item.description);
-  // console.log(descriptionText);
 
   const equipmentText = dataTable
     .filter((logement) => logement.id === logementId)
@@ -53,9 +56,8 @@ function Fiche() {
 
   return (
     <div className="fiche">
-      <div className="fiche__carousel">
-        {' '}
-        <Carrousel images={fichePictures} />{' '}
+      <div className="fiche__carrousel">
+        <Carrousel images={fichePictures} />
       </div>
       <div className="fiche__content">
         <div className="fiche__textntags">
@@ -82,8 +84,16 @@ function Fiche() {
         </div>
       </div>
       <div className="fiche__details">
-        <Collapse titleText={descriptionTitle} text={descriptionText} />
-        <Collapse titleText={equipmentTitle} text={equipmentText} />
+        <Collapse
+          className="fiche__details--collapse"
+          titleText={descriptionTitle}
+          text={descriptionText}
+        />
+        <Collapse
+          className="fiche__details--collapse"
+          titleText={equipmentTitle}
+          text={equipmentText}
+        />
       </div>
     </div>
   );

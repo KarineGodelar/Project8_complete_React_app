@@ -12,7 +12,6 @@ function Carrousel({ images }) {
   images.forEach((element) => {
     return element.forEach((item) => imageTable.push(item));
   });
-  const number = 1;
 
   return (
     <div className="carrousel">
