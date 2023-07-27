@@ -35,7 +35,9 @@ function Carrousel({ images }) {
           setCount(count < imageTable.length - 1 ? count + 1 : count)
         }
       />
-      <p className="number">{number}</p>
+      <p className="number">
+        {count + 1}/{imageTable.length}
+      </p>
     </div>
   );
 }
