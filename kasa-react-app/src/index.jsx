@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.scss';
 import Home from './pages/Home';
 import Fiche from './pages/Fiche-logement';
-// import Card from './components/Card';
 import Apropos from './pages/A-propos';
 import PageErreur from './pages/404';
 import Header from './components/Header';
