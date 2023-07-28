@@ -126,7 +126,7 @@
   &__details {
     margin-bottom: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     @media (max-width: 768px) {
       flex-direction: column;

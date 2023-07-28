@@ -21,20 +21,20 @@ function Carrousel({ images }) {
         alt="logement"
       />
       <img
-        className="arrow arrow--left"
+        className={imageTable.length === 1 ? 'invisible' : 'arrow arrow--left'}
         src={arrow_left}
         alt="flèche gauche"
         onClick={() => setCount(count > 0 ? count - 1 : count)}
       />
       <img
-        className="arrow arrow--right"
+        className={imageTable.length === 1 ? 'invisible' : 'arrow arrow--right'}
         src={arrow_right}
         alt="flèche gauche"
         onClick={() =>
           setCount(count < imageTable.length - 1 ? count + 1 : count)
         }
       />
-      <p className="number">
+      <p className={imageTable.length === 1 ? 'invisible' : 'number'}>
         {count + 1}/{imageTable.length}
       </p>
     </div>

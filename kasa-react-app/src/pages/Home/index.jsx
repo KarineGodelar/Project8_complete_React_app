@@ -11,7 +11,7 @@ function Home() {
     <div className="home-container">
       <Banner />
       <div className="cards-container">
-        <Card cardProps={cardTable[0]} />
+        <Card cardProps={cardTable[17]} />
         <Card cardProps={cardTable[1]} />
         <Card cardProps={cardTable[2]} />
         <div className="cards-container-big-screen">
