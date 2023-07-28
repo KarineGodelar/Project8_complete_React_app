@@ -125,12 +125,15 @@
 
   &__details {
     margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     width: 100%;
     @media (max-width: 768px) {
-      flex-direction: column;
-      margin-bottom: 17px;
+      margin-bottom: 30px;
+      margin-top: 10px;
+      grid-template-columns: 1fr;
     }
   }
 }

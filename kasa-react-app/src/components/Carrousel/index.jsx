@@ -7,7 +7,6 @@ import { useState } from 'react';
 
 function Carrousel({ images }) {
   const [count, setCount] = useState(0);
-  console.log(count);
   const imageTable = [];
   images.forEach((element) => {
     return element.forEach((item) => imageTable.push(item));
